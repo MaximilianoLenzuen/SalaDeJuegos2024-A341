@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #FF6F61, #FF9A8B);
+}
+
+.error-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.error-content {
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+}
+
+.error-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.error-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.retry-button, .login-button {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #FF6F61;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.retry-button:hover {
+    background: #FF6F61;
+    color: #fff;
+}
+
+.login-button {
+    background: #FF9A8B;
+}
+
+.login-button:hover {
+    background: #FF6F61;
+    color: #fff;
+}
+
+.error-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.background-shape {
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.background-shape1 {
+    height: 250px;
+    width: 250px;
+    background: #FF9A8B;
+    top: -75px;
+    left: -125px;
+    border-radius: 50%;
+}
+
+.background-shape2 {
+    height: 180px;
+    width: 180px;
+    background: #FF6F61;
+    bottom: -90px;
+    right: -90px;
+    border-radius: 50%;
+}

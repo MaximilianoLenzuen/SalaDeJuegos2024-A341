@@ -1,0 +1,52 @@
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login">
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" class="login__input" placeholder="Usuario / Email" [(ngModel)]="email" name="email">
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password" class="login__input" placeholder="Contraseña" [(ngModel)]="contrasenia" name="contrasenia">
+				</div>
+				<button class="button login__submit" (click)="loguear()">
+					<span class="button__text">Login</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>		
+				<button class="button login__submit" (click)="registrarse()">
+					<span class="button__text">Registrarse?</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>		
+				<button class="button login__submit" (click)="redirectToQuiensoy()">
+					<span class="button__text">Quien soy</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>
+				<div class ="acceso__rapido">
+					<button class="button quick_login" (click)="accesoRapido1()">
+						<span class="button__text">Acceso rapido 1</span>
+						<i class="button__icon fas fa-chevron-right"></i>
+					</button>	
+					<button class="button quick_login" (click)="accesoRapido2()">
+						<span class="button__text">Acceso rapido 2</span>
+						<i class="button__icon fas fa-chevron-right"></i>
+					</button>	
+				</div>	
+			</form>
+
+			<div class="social-login">
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>

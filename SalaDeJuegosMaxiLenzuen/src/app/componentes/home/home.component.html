@@ -1,0 +1,105 @@
+<section class="menu-juegos-container" *ngIf="user">
+    <div class="container">
+      <div class="container row">
+    <div class="col">
+      <div class="card-quiensoy">
+          <button class="volver" (click)="volverAHome()">Quien soy?</button>
+      </div>
+      <div class="card-quiensoy">
+        <button class="volver" (click)="irAEncuesta()">Encuesta</button>
+    </div>
+    </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body-logout">
+              <h5 class="card-title">Usuario</h5>
+              <p class="card-text">
+                  {{nombreDelUsuario}}
+              </p>
+              <a class="btn btn-primary btn-juegos-logout" (click)="desloggearEvent()"
+              >Log Out</a
+            >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+            class="card-img-top"
+            src="../../../assets/images/ahorcado/ahorcado.png"
+            alt="Card image cap"
+          />
+            <div class="card-body">
+              <h5 class="card-title">Ahorcado</h5>
+              <p class="card-text">
+                Tiene 6 intentos para adivinar la palabra ingresando letra por letra
+              </p>
+              <a href="/ahorcado" class="btn btn-primary btn-juegos"
+                >JUGAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-2">
+            <img
+            class="card-img-top"
+            src="../../../assets/images/mayor-o-menor.png"
+            alt="Card image cap"
+          />
+            <div class="card-body">
+              <h5 class="card-title">Mayor o Menor</h5>
+              <p class="card-text">
+                Adivina si la carta siguiente es mayor o menor!
+                Tiene 9 intentos
+              </p>
+              <a href="/mayormenor" class="btn btn-primary btn-juegos"
+                >JUGAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-2">
+            <img
+            class="card-img-top"
+            src="../../../assets/images/preguntados.png"
+            alt="Card image cap"
+          />
+            <div class="card-body">
+              <h5 class="card-title">Preguntados</h5>
+              <p class="card-text">
+                Adivina las banderas en el siguiente juego
+              </p>
+              <a href="/preguntados" class="btn btn-primary btn-juegos"
+                >JUGAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-2">
+            <img
+            class="card-img-top"
+            src="../../../assets/images/juegobomba.jpg"
+            alt="Card image cap"
+          />
+            <div class="card-body">
+              <h5 class="card-title">Desactiva la bomba</h5>
+              <p class="card-text">
+                El juego consiste en desactivar la bomba adivinando la contraseña mediante una serie de pistas
+              </p>
+              <a a href="/desactivar-bomba"
+                class="btn btn-primary btn-juegos"
+                >JUGAR</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <app-chat></app-chat>
+    </div>
+  </section>
+  

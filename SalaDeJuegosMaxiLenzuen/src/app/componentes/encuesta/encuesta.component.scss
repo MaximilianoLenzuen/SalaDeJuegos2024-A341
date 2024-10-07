@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+/* BASIC */
+
+.encuesta-container {
+  background-image: url("../../../assets/images/sala-de-juegos-1.jpg");
+  font-family: "Poppins", sans-serif;
+  //background-image: url("../../../assets/juegos.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  padding-left: 15rem;
+  min-height: 100vh;
+  padding-top: 6rem;
+}
+
+.contenedor-form {
+  width: 70vw;
+  padding-top: 1rem;
+  padding-bottom: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 0 16px rgb(196, 5, 170);
+}
+
+.campo-requerido {
+  color: red;
+  text-shadow: 1px 1px black;
+}
+
+@media screen and (max-width: 500px) {
+  .contenedor-form {
+    width: 95vw;
+  }
+}
+/* ****************************************************************** */
+/* ****************************************************************** */
+/* ****************************************************************** */
+/* ****************************************************************** */
+
+.btn-enviar {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 81, 255);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 81, 255, 0.8);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  margin: 1rem auto;
+}
+
+.btn-enviar:hover {
+  background-color: #fdfdfd;
+  box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.4);
+  color: #000;
+  transform: translateY(-7px);
+}
+
+.btn-enviar {
+  transform: translateY(-1px);
+}
+
+/* Estilos generales para los cuadros de texto */
+.form-control {
+  width: 97%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cambia el borde y agrega una sombra cuando el cuadro de texto está enfocado */
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  background-color: #fff;
+}
+
+/* Estilo de las etiquetas */
+.form-label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+/* Estilo para el texto de advertencia */
+.campo-requerido {
+  color: red;
+  font-size: 12px;
+}
+
+.volver {
+  padding: 0.8em 1.8em;
+  border: 2px solid #17c3b2;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.volver::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #17c3b2;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.volver:hover::before {
+  width: 105%;
+}
+
+.volver:hover {
+  color: #111;
+  text-shadow: 1px 1px 2px #fff;
+}

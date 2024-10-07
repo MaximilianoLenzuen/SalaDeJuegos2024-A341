@@ -1,0 +1,34 @@
+<section class="mayormenor-container">
+<button class="volver" (click)="volverAHome()">volver</button>
+    <div class="container d-flex flex-column justify-content-center">
+      <h1 class="titulo-mayormenor">MAYOR MENOR</h1>
+      <p class="puntuacion">
+        Puntuación: {{ score }}
+        <span class="intentos">(Intentos: {{ attempts }}/9)</span>
+      </p>
+      <div class="rowCartas">
+        <div class="row">
+          <img class="carta-izquierda" src="../../../assets/images/mayormenor/{{ cardImage }}" alt="" />
+        </div>
+        <div class="row">
+          <img
+            class="carta-derecha"
+            src="../../../assets/images/mayormenor/{{ cardDerechaImage }}.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div *ngIf="!activeGame">
+        <button class="btn-comenzar-reiniciar" (click)="startGame()">
+          {{ startButtonText }}
+        </button>
+      </div>
+      <div class="btn-mayormenor" *ngIf="activeGame">
+        <button class="btn-menor" (click)="playMayorMenor('menor')">Menor</button>
+        <button class="btn-mayor" (click)="playMayorMenor('mayor')">Mayor</button>
+      </div>
+      <p [style.color]="resultadoColor" class="puntuacion">
+        Resultado: {{ resultadoMensaje }}
+      </p>
+    </div>
+  </section>

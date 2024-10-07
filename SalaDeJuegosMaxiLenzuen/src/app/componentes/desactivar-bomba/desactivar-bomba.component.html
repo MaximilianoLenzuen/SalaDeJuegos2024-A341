@@ -1,0 +1,42 @@
+<section class="mayormenor-container">
+<button class="volver" (click)="volverAHome()">volver</button>
+    <div class="container d-flex flex-column justify-content-center">
+      <h1 class="titulo-mayormenor">Desactivar bomba</h1>
+      <p class="puntuacion">
+        Puntuación: {{ score }}
+        <span class="intentos">(Intentos: {{ attempts }})</span>
+      </p>
+      <p class="puntuacion">
+        TIEMPO: {{ time }} / 60
+      </p>
+      <div class="rowCartas">
+        <div class="row">
+          <img
+            class="carta-derecha"
+            src="../../../assets/images/{{ cardDerechaImage }}"
+            alt=""
+          />
+        </div>
+      </div>
+      <div *ngIf="!activeGame">
+        <button class="btn-comenzar-reiniciar" (click)="startGame()">
+          {{ startButtonText }}
+        </button>
+      </div>
+      <div *ngIf="activeGame">
+        <input
+          type="number"
+          [(ngModel)]="inputValue"
+          placeholder="Inserta el código"
+          class="input-codigo"
+        />
+        <button class="btn-desactivar" (click)="intentarDesactivarBomba()">
+          Desactivar
+        </button>
+      </div>
+      <div class="btn-mayormenor" *ngIf="activeGame">
+        <button class="btn-menor" *ngIf="esMayor" disabled >Menor</button>
+        <button class="btn-mayor" *ngIf="esMenor" disabled >Mayor</button>
+      </div>
+    </div>
+  </section>

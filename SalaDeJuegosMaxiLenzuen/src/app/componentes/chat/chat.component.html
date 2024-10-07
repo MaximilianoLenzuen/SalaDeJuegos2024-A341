@@ -1,0 +1,42 @@
+<section class="chat-container">
+  <div class="card text-center contenedor-carta view-from-right">
+    <div class="card-header">CHAT DE USUARIOS</div>
+    <div class="card-body">
+      <div #contenedorMensajes id="contenedor-mensajes" class="contenedor-mensajes">
+        <p
+          *ngFor="let message of listaDeMensajes"
+          class="p-2 mensajes"
+          [ngClass]="
+              usuarioActual == message.usuario
+              ? 'mensaje-enviado'
+              : 'mensaje-recibido'
+          "
+        >
+          <span
+            [ngClass]="usuarioActual == message.usuario ? 'email-1' : 'email-2'"
+            > {{message.usuario }}</span
+          >
+          <br />
+          {{ message.mensaje }} <br />
+          <span class="fecha">{{ message.fechaYHora }}</span>
+        </p>
+      </div>
+    </div>
+
+    <form class="card-footer text-muted input-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Ingrese su mensaje"
+        [(ngModel)]="mensajeAEnviar"
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <button class="btn-chat" type="submit" form="login_form" (click)="publicarMensajeEnChat()">Enviar</button>
+      <div class="input-group-append" >
+        <span class="input-group-text btn-enviar" id="basic-addon2">
+          <span class="fa-icon"></span>
+        </span>
+      </div>
+    </form>
+  </div>
+</section>
